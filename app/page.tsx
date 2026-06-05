@@ -371,92 +371,109 @@ _Inquiry from TOES N TAILS Website_`)
         </AnimatePresence>
       </motion.nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+     {/* Hero Section */}
+<section className="relative min-h-screen flex items-center pt-20">
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+  </div>
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6"
+        >
+          <Sparkles className="w-4 h-4 text-primary" />
+          <span className="text-sm text-primary">Premium Pet Care</span>
+        </motion.div>
+
+        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+          <span className="gold-text">TOES N TAILS</span>
+          <br />
+          <span className="text-foreground">Premium Pet Grooming</span>
+        </h1>
+
+        <p className="text-lg text-muted-foreground mb-8 max-w-lg">
+          Luxury grooming experience for your beloved pets. Where every paw gets
+          the royal treatment it deserves.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsBookingOpen(true)}
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 animate-glow"
+          >
+            <Crown className="w-5 h-5" />
+            Book VIP Grooming
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("services")}
+            className="border border-primary/50 text-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/10 transition-colors flex items-center justify-center gap-2"
+          >
+            <Sparkles className="w-5 h-5 text-primary" />
+            Explore Services
+          </motion.button>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6"
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm text-primary">Premium Pet Care</span>
-              </motion.div>
+        {/* Google Maps Link */}
+        <a
+          href="https://maps.app.goo.gl/pVYTnXXQtJsDLkeQ7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:underline"
+        >
+          📍 View Our Location on Google Maps
+        </a>
+      </motion.div>
 
-              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="gold-text">Royal Care</span>
-                <br />
-                <span className="text-foreground">for Your Pet</span>
-              </h1>
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="relative"
+      >
+        <div className="relative aspect-square max-w-lg mx-auto">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl" />
 
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                Luxury grooming experience for your beloved pets. Where every paw gets the royal treatment it deserves.
-              </p>
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="relative z-10"
+          >
+            <Image
+              src="/images/royal-pet.png"
+              alt="TOES N TAILS Pet Grooming"
+              width={500}
+              height={500}
+              className="rounded-3xl shadow-2xl"
+              priority
+            />
+          </motion.div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsBookingOpen(true)}
-                  className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 animate-glow"
-                >
-                  <Crown className="w-5 h-5" />
-                  Book VIP Grooming
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => scrollToSection("services")}
-                  className="border border-primary/50 text-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/10 transition-colors flex items-center justify-center gap-2"
-                >
-                  <Sparkles className="w-5 h-5 text-primary" />
-                  Explore Services
-                </motion.button>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
-            >
-              <div className="relative aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl" />
-                <motion.div
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10"
-                >
-                  <Image
-                    src="/images/royal-pet.png"
-                    alt="Royal Pet"
-                    width={500}
-                    height={500}
-                    className="rounded-3xl shadow-2xl"
-                    priority
-                  />
-                </motion.div>
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/30 rounded-full blur-2xl" />
-                <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
-              </div>
-            </motion.div>
-          </div>
+          <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/30 rounded-full blur-2xl" />
+          <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-xl" />
         </div>
-      </section>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section id="services" className="py-24 relative">
@@ -830,54 +847,86 @@ _Inquiry from TOES N TAILS Website_`)
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 relative bg-card/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
-              <span className="gold-text">Contact</span> Us
-            </h2>
-            <p className="text-muted-foreground mb-8">Ready to pamper your pet? Get in touch with us today!</p>
+<section className="py-24 relative bg-card/50">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
+        <span className="gold-text">Contact</span> Us
+      </h2>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBERS[0]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                +91 88009 71337
-              </a>
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBERS[1]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                +91 87964 93504
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <p className="text-muted-foreground mb-8">
+        Ready to pamper your pet? Get in touch with us today!
+      </p>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-primary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <Crown className="w-6 h-6 text-primary" />
-              <span className="font-serif text-lg font-bold gold-text">TOES N TAILS</span>
-            </div>
-            <p className="text-muted-foreground text-sm">© 2024 TOES N TAILS. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBERS[0]}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
+        >
+          <Phone className="w-5 h-5" />
+          +91 88009 71337
+        </a>
+
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBERS[1]}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors"
+        >
+          <Phone className="w-5 h-5" />
+          +91 87964 93504
+        </a>
+
+        <a
+          href="https://maps.app.goo.gl/pVYTnXXQtJsDLkeQ7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:opacity-90 transition-colors"
+        >
+          📍 Open in Google Maps
+        </a>
+
+      </div>
+
+    </motion.div>
+  </div>
+</section>
+  
+     {/* Footer */}
+<footer className="py-8 border-t border-primary/20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <div className="flex items-center gap-2">
+        <Crown className="w-6 h-6 text-primary" />
+        <span className="font-serif text-lg font-bold gold-text">
+          TOES N TAILS
+        </span>
+      </div>
+
+      <a
+        href="https://maps.app.goo.gl/pVYTnXXQtJsDLkeQ7"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:underline"
+      >
+        📍 Find Us on Google Maps
+      </a>
+
+      <p className="text-muted-foreground text-sm">
+        © 2024 TOES N TAILS. All rights reserved.
+      </p>
+
+    </div>
+  </div>
+</footer>
 
       {/* Mobile Sticky Book Button */}
       <motion.div
