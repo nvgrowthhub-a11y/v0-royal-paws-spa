@@ -136,7 +136,7 @@ export default function RoyalPawsSpa() {
 *Date:* ${formData.date}
 *Address:* ${formData.address}
 
-_Sent from Royal Paws Spa Website_`)
+_Sent from TOES N TAILS Website_`)
   }
 
   const submitToGoogleSheets = async () => {
@@ -223,14 +223,14 @@ _Sent from Royal Paws Spa Website_`)
   }
 
   const generateLeadWhatsAppMessage = () => {
-    return encodeURIComponent(`Hi! I'm interested in Royal Paws Spa services.
+    return encodeURIComponent(`Hi! I'm interested in TOES N TAILS services.
 
 *Name:* ${leadForm.name}
 *Phone:* ${leadForm.phone}
 *Pet Type:* ${leadForm.petType}
 *Message:* ${leadForm.message}
 
-_Inquiry from Royal Paws Website_`)
+_Inquiry from TOES N TAILS Website_`)
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -297,7 +297,7 @@ _Inquiry from Royal Paws Website_`)
               whileHover={{ scale: 1.05 }}
             >
               <Crown className="w-8 h-8 text-primary" />
-              <span className="font-serif text-2xl font-bold gold-text">Royal Paws Spa</span>
+              <span className="font-serif text-2xl font-bold gold-text">TOES N TAILS</span>
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -872,9 +872,9 @@ _Inquiry from Royal Paws Website_`)
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Crown className="w-6 h-6 text-primary" />
-              <span className="font-serif text-lg font-bold gold-text">Royal Paws Spa</span>
+              <span className="font-serif text-lg font-bold gold-text">TOES N TAILS</span>
             </div>
-            <p className="text-muted-foreground text-sm">© 2024 Royal Paws Spa. All rights reserved.</p>
+            <p className="text-muted-foreground text-sm">© 2024 TOES N TAILS. All rights reserved.</p>
           </div>
         </div>
       </footer>
