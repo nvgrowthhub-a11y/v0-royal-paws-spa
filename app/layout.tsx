@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Royal Paws Spa | Luxury Pet Grooming',
+  title: 'TOES N TAILS | Luxury Pet Grooming',
   description: 'Royal Care for Your Pet - Experience the ultimate luxury grooming experience for your beloved pets at Royal Paws Spa.',
   keywords: ['pet grooming', 'luxury pet spa', 'dog grooming', 'cat grooming', 'VIP pet care'],
   generator: 'v0.app',
